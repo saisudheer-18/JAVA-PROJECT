@@ -1,0 +1,237 @@
+/* ---------------------------------------------------------
+   CORPORATE HR THEME — GLOBAL SETTINGS
+--------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+    min-height: 100vh;
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Consistent container shadow */
+.card-shadow {
+    box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+/* Corporate Blue Primary */
+:root {
+    --primary: #3563E9;
+    --primary-dark: #224CCE;
+    --danger: #D62828;
+    --danger-dark: #A61E1E;
+    --border: #d7ddea;
+    --text-dark: #1a1a1a;
+    --text-light: #6c7a92;
+    --table-row: #f7f9fc;
+}
+
+/* ---------------------------------------------------------
+   HOME PAGE (index.jsp)
+--------------------------------------------------------- */
+.home-container {
+    background: #fff;
+    width: 480px;
+    padding: 42px 38px;
+    border-radius: 16px;
+    text-align: center;
+    animation: fadeUp 0.5s ease-out;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 28px;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.menu-btn {
+    background: var(--primary);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 14px rgba(53, 99, 233, 0.25);
+}
+
+.menu-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* ---------------------------------------------------------
+   FORM CONTAINERS (Register / Update / Delete / Search)
+--------------------------------------------------------- */
+.form-container {
+    width: 480px;
+    background: #fff;
+    padding: 42px 40px;
+    border-radius: 16px;
+    animation: fadeUp 0.5s ease-out;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.form-container.large {
+    width: 900px;
+}
+
+.form-container h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------
+   INPUTS
+--------------------------------------------------------- */
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 15px 14px;
+    margin-bottom: 18px;
+    border: 1.8px solid var(--border);
+    border-radius: 10px;
+    background: #fdfdff;
+    font-size: 16px;
+    transition: 0.25s ease;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 8px rgba(53, 99, 233, 0.25);
+    background: #fff;
+}
+
+/* ---------------------------------------------------------
+   BUTTONS
+--------------------------------------------------------- */
+button,
+.btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 14px rgba(53, 99, 233, 0.25);
+}
+
+button:hover,
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* Delete Button */
+.btn.delete {
+    background: var(--danger);
+    box-shadow: 0 4px 14px rgba(214, 40, 40, 0.25);
+}
+.btn.delete:hover {
+    background: var(--danger-dark);
+    transform: translateY(-3px);
+}
+
+/* Back link */
+.back {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+/* Success / Error Messages */
+.success {
+    color: green;
+    font-weight: 600;
+    margin-top: 12px;
+    font-size: 18px;
+}
+p {
+    color: var(--text-dark);
+    margin-top: 10px;
+}
+
+/* ---------------------------------------------------------
+   TABLES (Search + View All)
+--------------------------------------------------------- */
+.table-wrapper {
+    margin-top: 25px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+table th {
+    background: var(--primary);
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+table td {
+    padding: 14px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    font-size: 15px;
+}
+
+table tr:nth-child(even) td {
+    background: var(--table-row);
+}
+
+table tr:hover td {
+    background: #e9efff;
+}
+
+/* ---------------------------------------------------------
+   ANIMATION
+--------------------------------------------------------- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+    }
+}
